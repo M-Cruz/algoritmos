@@ -1,2 +1,2 @@
 # algoritmos
-Aplicaciones practicas de algoritmos
+Practicas con algoritmos
