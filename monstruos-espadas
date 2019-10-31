@@ -1,0 +1,49 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        int[] monstruos = new int[4];
+        int[] espadas = new int[4];
+        monstruos[0]=1;
+        monstruos[1]=2;
+        monstruos[2]=3;
+        monstruos[3]=4;
+        espadas[0]=2;
+        espadas[1]=3;
+        espadas[2]=4;
+        espadas[3]=5;
+    
+        //acomodda datos del int array de mayor a menor
+        monstruos=acomodar(monstruos);
+        espadas=acomodar(espadas);
+        int ganar=0;
+        
+        //Compara monstruo vs espada comenzando desde los mayores
+        for(int i=0;i<monstruos.length;i++){
+            if(monstruos[i]<espadas[i]){
+                ganar++;
+            }
+        }
+        //si las espadas superan todos los monstruos Anita sobrevive
+        if(ganar>=monstruos.length){
+                System.out.println("Anita sobrevivirá");
+            } else {
+                System.out.println("Anita morirá");
+            }
+        
+        
+    }
+    public static int[] acomodar(int[] args){
+            for(int j=0;j<args.length-1;j++){
+                for(int i=j+1;i<args.length-1;i++){
+                    if(args[j]<args[i]){
+                        int carga=args[j];
+                        args[j]=args[i];
+                        args[i]=carga;
+                    }
+                }
+            }
+            
+            return args;
+        }
+}
