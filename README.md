@@ -1,2 +1,1 @@
-# algoritmos
-Practicas con algoritmos
+
